@@ -1,26 +1,74 @@
 import React from "react";
 import Stack from "@mui/material/Stack";
-import Link from "@mui/material/Link";
-import { styled } from "@mui/material/styles";
-
-const StyledLinkDesktop = styled(Link)(({ theme }) => ({
-  color: "white",
-  textDecoration: "none",
-  fontFamily: theme.typography.fontFamily,
-  cursor: "pointer",
-  "&:hover": {
-    color: "rgb(6, 156, 100)",
-  },
-}));
+import { Link } from "react-scroll";
 
 function Navbar() {
   return (
     <Stack direction="row" gap={6}>
-      <StyledLinkDesktop>Home</StyledLinkDesktop>
-      <StyledLinkDesktop>About</StyledLinkDesktop>
-      <StyledLinkDesktop>Services</StyledLinkDesktop>
-      <StyledLinkDesktop>Menu</StyledLinkDesktop>
-      <StyledLinkDesktop>Contact</StyledLinkDesktop>
+      <Link
+        to="home"
+        smooth={true}
+        duration={500}
+        offset={-64}
+        spy={true}
+        style={{
+          color: "white",
+          textDecoration: "none",
+          cursor: "pointer",
+          fontFamily: "Poppins",
+        }}
+        activeStyle={{ color: "rgb(6, 156, 100)" }}
+      >
+        Home
+      </Link>
+      <Link
+        to="about"
+        smooth={true}
+        duration={500}
+        offset={-64}
+        spy={true}
+        activeClass="links"
+        style={{
+          color: "white",
+          textDecoration: "none",
+          cursor: "pointer",
+          fontFamily: "Poppins",
+        }}
+        activeStyle={{ color: "rgb(6, 156, 100)" }}
+      >
+        About
+      </Link>
+      <Link
+        to="special"
+        smooth={true}
+        duration={500}
+        offset={-64}
+        spy={true}
+        style={{
+          color: "white",
+          textDecoration: "none",
+          cursor: "pointer",
+          fontFamily: "Poppins",
+        }}
+        activeStyle={{ color: "rgb(6, 156, 100)" }}
+      >
+        Menu
+      </Link>
+      <Link
+        to="contact"
+        smooth={true}
+        duration={500}
+        spy={true}
+        style={{
+          color: "white",
+          textDecoration: "none",
+          cursor: "pointer",
+          fontFamily: "Poppins",
+        }}
+        activeStyle={{ color: "rgb(6, 156, 100)" }}
+      >
+        Contact
+      </Link>
     </Stack>
   );
 }

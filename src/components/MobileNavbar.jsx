@@ -1,18 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import Link from "@mui/material/Link";
-import { styled } from "@mui/material/styles";
 import ClickAwayListener from "@mui/base/ClickAwayListener";
-
-const StyledLinkMobile = styled(Link)(({ theme }) => ({
-  color: "black",
-  textDecoration: "none",
-  fontFamily: theme.typography.fontFamily,
-  cursor: "pointer",
-  "&:hover": {
-    color: "rgb(6, 156, 100)",
-  },
-}));
+import { Link } from "react-scroll";
 
 function MobileNavbar({ setToggle }) {
   return (
@@ -29,11 +18,70 @@ function MobileNavbar({ setToggle }) {
         py={2}
         borderRadius={2}
       >
-        <StyledLinkMobile>Home</StyledLinkMobile>
-        <StyledLinkMobile>About</StyledLinkMobile>
-        <StyledLinkMobile>Services</StyledLinkMobile>
-        <StyledLinkMobile>Menu</StyledLinkMobile>
-        <StyledLinkMobile>Contact</StyledLinkMobile>
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          offset={-64}
+          spy={true}
+          style={{
+            color: "black",
+            textDecoration: "none",
+            cursor: "pointer",
+            fontFamily: "Poppins",
+          }}
+          activeStyle={{ color: "rgb(6, 156, 100)" }}
+        >
+          Home
+        </Link>
+        <Link
+          to="about"
+          smooth={true}
+          duration={500}
+          offset={-64}
+          spy={true}
+          activeClass="links"
+          style={{
+            color: "black",
+            textDecoration: "none",
+            cursor: "pointer",
+            fontFamily: "Poppins",
+          }}
+          activeStyle={{ color: "rgb(6, 156, 100)" }}
+        >
+          About
+        </Link>
+        <Link
+          to="special"
+          smooth={true}
+          duration={500}
+          offset={-64}
+          spy={true}
+          style={{
+            color: "black",
+            textDecoration: "none",
+            cursor: "pointer",
+            fontFamily: "Poppins",
+          }}
+          activeStyle={{ color: "rgb(6, 156, 100)" }}
+        >
+          Menu
+        </Link>
+        <Link
+          to="contact"
+          smooth={true}
+          duration={500}
+          spy={true}
+          style={{
+            color: "black",
+            textDecoration: "none",
+            cursor: "pointer",
+            fontFamily: "Poppins",
+          }}
+          activeStyle={{ color: "rgb(6, 156, 100)" }}
+        >
+          Contact
+        </Link>
       </Box>
     </ClickAwayListener>
   );

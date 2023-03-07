@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import AboutImg from "../img/about.jpg";
 import { styled } from "@mui/material/styles";
 import Button from "../components/Button";
+import { Element } from "react-scroll";
 
 const StyledHeading = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.main,
@@ -18,7 +19,7 @@ const StyledGrid = styled(Grid)(({ theme }) => ({
 
 function About() {
   return (
-    <section>
+    <Element name="about">
       <Grid container columnSpacing={4}>
         <Grid item xs={12} sm={6} display="flex" justifyContent="center">
           <Box sx={{ maxWidth: "80%" }}>
@@ -440,7 +441,7 @@ function About() {
           </StyledGrid>
         </Grid>
       </Box>
-    </section>
+    </Element>
   );
 }
 

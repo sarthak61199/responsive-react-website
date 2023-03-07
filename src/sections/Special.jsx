@@ -10,6 +10,7 @@ import MobileApp from "../img/movil-app.png";
 import AppOne from "../img/app1.png";
 import AppTwo from "../img/app2.png";
 import { styled } from "@mui/material/styles";
+import { Element } from "react-scroll";
 
 const StyledHeading = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.main,
@@ -17,7 +18,7 @@ const StyledHeading = styled(Typography)(({ theme }) => ({
 
 function Special() {
   return (
-    <section style={{ marginTop: "10rem" }}>
+    <Element style={{ marginTop: "10rem" }} name="special">
       <StyledHeading textAlign="center">Special</StyledHeading>
       <Typography
         vairant="h2"
@@ -38,7 +39,6 @@ function Special() {
         display="flex"
         columnSpacing={3}
         rowSpacing={{ xs: 10, sm: 20 }}
-        mb={25}
       >
         <Grid
           item
@@ -134,7 +134,7 @@ function Special() {
           </Box>
         </Grid>
       </Grid>
-    </section>
+    </Element>
   );
 }
 

@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Button from "../components/Button";
 import { styled } from "@mui/material/styles";
+import { Element } from "react-scroll";
 
 const StyledHeading = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.main,
@@ -10,7 +11,7 @@ const StyledHeading = styled(Typography)(({ theme }) => ({
 
 function Contact() {
   return (
-    <section>
+    <Element name="contact" style={{ marginTop: "200px" }}>
       <Grid
         container
         display="flex"
@@ -51,7 +52,7 @@ function Contact() {
           <Button>Contact us</Button>
         </Grid>
       </Grid>
-    </section>
+    </Element>
   );
 }
 
