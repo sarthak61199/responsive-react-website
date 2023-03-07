@@ -43,10 +43,11 @@ function Footer() {
     <footer style={{ marginTop: "10rem" }}>
       <Stack
         direction={{ xs: "column", sm: "row" }}
+        alignItems={{ xs: "center", sm: "flex-start" }}
         gap={{ xs: 3, sm: 0 }}
         justifyContent="space-between"
       >
-        <StyledBox>
+        <StyledBox sx={{ alignItems: { xs: "center", sm: "flex-start" } }}>
           <StyledRestaurantHeading>Tasty Food</StyledRestaurantHeading>
           <Typography
             sx={{ color: "rgb(199, 209, 204)", fontSize: "0.875rem" }}
@@ -59,21 +60,30 @@ function Footer() {
             <TwitterIcon sx={{ color: "white" }} />
           </Box>
         </StyledBox>
-        <StyledBox gap={1}>
+        <StyledBox
+          gap={1}
+          sx={{ alignItems: { xs: "center", sm: "flex-start" } }}
+        >
           <StyledFooterHeading>Services</StyledFooterHeading>
           <StyledLink>Delivery</StyledLink>
           <StyledLink>Pricing</StyledLink>
           <StyledLink>Fast food</StyledLink>
           <StyledLink>Reserve your spot</StyledLink>
         </StyledBox>
-        <StyledBox gap={1}>
+        <StyledBox
+          gap={1}
+          sx={{ alignItems: { xs: "center", sm: "flex-start" } }}
+        >
           <StyledFooterHeading>Information</StyledFooterHeading>
           <StyledLink>Event</StyledLink>
           <StyledLink>Contact us</StyledLink>
           <StyledLink>Privacy policy</StyledLink>
           <StyledLink>Terms of service</StyledLink>
         </StyledBox>
-        <StyledBox gap={1}>
+        <StyledBox
+          gap={1}
+          sx={{ alignItems: { xs: "center", sm: "flex-start" } }}
+        >
           <StyledFooterHeading>Address</StyledFooterHeading>
           <StyledTypo>Lima - Peru</StyledTypo>
           <StyledTypo>Jr Union #999</StyledTypo>
