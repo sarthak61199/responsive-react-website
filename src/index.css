@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1d2521;
+}
+
+svg {
+  height: 64px;
+  width: 64px;
+  fill: rgb(6, 156, 100);
+}
